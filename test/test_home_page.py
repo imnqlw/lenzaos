@@ -43,11 +43,11 @@ def test_success_code():
 def test_create_workspace_correct_name():
     browser.open('/')
     browser.element('[class="button-ui btn btn--full-width with-border btn--lg no-select"]').click()
-    browser.element('#email-input').type('dd8@test.com').click()
+    browser.element('#email-input').type('dd1@test.com').click()
     browser.element('[class="btn btn--full-width with-border btn--lg no-select"]').click()
     browser.element('[class="code-input__field focus-shadow code-input__field--current"]').type('666555')
     browser.element('[class="list-item__info-wrapper"]').click()
-    browser.element('#domain-company').type('test_name_23')
+    browser.element('#domain-company').type('test_name_24')
     time.sleep(1)
     browser.element("//span[@class='btn__title']").click()
     browser.element(".pr_profile").should(have.text('Настройка личного профиля'))
@@ -83,4 +83,40 @@ def test_movie_back_workspace():
     browser.element('.hdi_title.hdi_title_nodescription').wait_until(have.text('Похоже, вы еще не используете Lenza'))
 
 
+def test_fill_only_name():
+    browser.open('/')
+    browser.element('[class="button-ui btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('#email-input').type('dde1@test.com').click()
+    browser.element('[class="btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('[class="code-input__field focus-shadow code-input__field--current"]').type('666555')
+    browser.element('[class="list-item__info-wrapper"]').click()
+    browser.element(by.text("Мне понятно. Вперед!")).click()
+    browser.element("//input[@placeholder='Введите имя']").type('Имя')
+    browser.element("#rcaec']").should(be.disabled)
+
+def test_fill_only_surname():
+    browser.open('/')
+    browser.element('[class="button-ui btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('#email-input').type('dde1@test.com').click()
+    browser.element('[class="btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('[class="code-input__field focus-shadow code-input__field--current"]').type('666555')
+    browser.element('[class="list-item__info-wrapper"]').click()
+    browser.element(by.text("Мне понятно. Вперед!")).click()
+    browser.element("//input[@placeholder='Введите фамилию']").type('Фамилия')
+    browser.element("#rcaec']").should(be.disabled)
+
+def test_load_only_photo_png():
+    browser.open('/')
+    browser.element('[class="button-ui btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('#email-input').type('dde1@test.com').click()
+    browser.element('[class="btn btn--full-width with-border btn--lg no-select"]').click()
+    browser.element('[class="code-input__field focus-shadow code-input__field--current"]').type('666555')
+    browser.element('[class="list-item__info-wrapper"]').click()
+    browser.element(by.text("Мне понятно. Вперед!")).click()
+    browser.element(".avatar__img-upload-input").send_keys('E:\\proect\\lenzaos\\ava.png')
+    time.sleep(1)
+    browser.element("#rcaec']").should(be.disabled)
+
+def test_load_only_jpg():
+    browser.open('/')
 
