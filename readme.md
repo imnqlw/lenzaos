@@ -2,7 +2,7 @@
 
 > <a target="_blank" href="https://auth.lenzaos.com/">Ссылка на сайт</a>
 
-![This is an image](pic/litres.PNG)
+![This is an image](pages/lenzaos.png)
 
 <h3> Список проверок, реализованных в автотестах:</h3>
 
