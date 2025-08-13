@@ -24,12 +24,12 @@
 
 #### Общие результаты
 
-![This is an image](pages/allure1.png)
+<img alt="This is an image" height="80" src="pages/allure1.png" width="80"/>
 
 #### Список тест кейсов
 
-![This is an image](pages/allure3.png)
+<img alt="This is an image" height="100" src="pages/allure3.png" width="150"/>
 
 ## [Видео прохождения автотестов](pages/allure.gif)
 
-![This is an gif](pages/allure.gif)
+<img alt="This is an gif" height="100" src="pages/allure.gif" width="150"/>
