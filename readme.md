@@ -32,4 +32,4 @@
 
 ## [Видео прохождения автотестов](pages/allure.gif)
 
-<img alt="This is an gif" height="100" src="pages/allure.gif" width="500"/>
+<img alt="This is an gif" height="400" src="pages/allure.gif" width="500"/>
