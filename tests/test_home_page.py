@@ -46,7 +46,7 @@ def test_v_mail():
 @allure.severity('normal')
 @allure.label('layer', 'web')
 def test_w_code():
-    mp.set_wrong_code()
+    mp.put_wrong_code()
     mp.check_wrong_code()
 
 
